@@ -230,6 +230,7 @@
             $(".popup").addClass("act");
             $(".popup .sorting_popup").addClass("act");
         });
+
         $(".popup .sorting_popup ul li button").click(function () {
             const text = $(this).text();
             $(".popup .sorting_popup ul li").removeClass("act");
@@ -246,6 +247,7 @@
             $(".popup").addClass("act");
             $(".popup .level_popup").addClass("act");
         });
+
         $(".popup .level_popup ul li button").click(function () {
             const text = $(this).text();
             $(".popup .level_popup ul li").removeClass("act");
@@ -255,9 +257,6 @@
                 $(".popup .level_popup").removeClass("act");
             }, 100);
             $(".section04 .con .sort_wrap .select_wrap.level .select p").text(text);
-        });
-        $(".popup .select_popup.level_popup button").click(function () {
-            $(".popup .select_popup.level_popup, .popup .select_popup.level_popup * , .popup").removeClass("act");
         });
 
         // menu
