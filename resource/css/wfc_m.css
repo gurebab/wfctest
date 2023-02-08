@@ -602,8 +602,10 @@ header .profileInfo .bottom a {
     background-repeat: no-repeat;
 }
 
-.popup .select_popup ul li a {
+.popup .select_popup ul li button {
+    width: 100%;
     display: block;
+    text-align: left;
 }
 
 .popup .select_popup.level_popup ul {
