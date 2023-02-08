@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="70여글자">
+  <meta name="title" content="타이틀">
+  <meta property="og:type" content="주소">
+  <meta property="og:title" content="주70여글자">
+  <meta property="og:description" content="페이지 설명">
+  <meta property="og:image" content="../썸네일.png">
+  <meta property="og:url" content="사이트주소">
+  <link rel="canonical" href="대표url">
+  <title>WFC Library</title>
+
+  <script src="./resource/js/jquery-3.3.1.min.js"></script>
+
+  <link rel="stylesheet" href="./resource/css/wfc.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <input class="search_bar" type="text" placeholder="search">
+      <h1><a class="logo" href="#">home</a></h1>
+      <ul class="util">
+        <li class="profile">
+          <div class="profile_bg"></div>
+          <p>Elizabeth</p>
+          <img class="profile_img" src="./resource/image/임시이미지/temporary_proflie.png" alt="profile">
+          <ul class="profileInfo">
+            <li class="top">
+              <img class="profile_img" src="./resource/image/임시이미지/temporary_proflie.png" alt="profile">
+              <p>Elizabeth</p>
+            </li>
+            <li class="center">
+              <a href="#" class="change">
+                <span>Switch to</span>
+                <p href="#" class="highlights">Highlights</p><span>collection</span>
+              </a>
+              <a href="#">FAQ</a>
+            </li>
+            <li class="bottom">
+              <a href="#">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li class="lang"><button type="button">中文</button></li>
+      </ul>
+    </header>
+    <div class="section section01">
+      <div class="item_wrap">
+        <div class="Promoted">
+          <div class="book">
+            <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="" class="bookCover">
+            <span class="tag">Today&#8217;s Book</span>
+          </div>
+          <div class="info">
+            <p class="tit">Toy Story 4</p>
+            <span class="plot">Read along with Disney! Sea monsters Luca and Alberto have an amazing adventure on land!
+              Follow along with word-for-word narration as Luca and Alberto see how hard it is to adjust to life on
+              land!
+            </span>
+            <div class="metaData">
+              <dl class="level">
+                <dt>Level</dt>
+                <dd>1</dd>
+              </dl>
+              <dl class="Series">
+                <dt>Series</dt>
+                <dd>Pixar</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item_wrap">
+        <div class="lastRead">
+          <div class="book">
+            <div>
+              <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="" class="bookCover">
+            </div>
+            <span class="tag">Last Read Book</span>
+          </div>
+          <div class="info">
+            <p class="tit">Reading Stats</p>
+            <div class="stat">
+              <dl class="Words">
+                <dt>Words</dt>
+                <dd>4826</dd>
+              </dl>
+              <dl class="Books">
+                <dt>Books</dt>
+                <dd>2816</dd>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section02">
+      <div class="option_wrap">
+        <ul class="tab">
+          <li class="act"><button>Decodeables</button></li>
+          <li><button>Level 1</button></li>
+          <li><button>Level 2</button></li>
+          <li><button>Level 3</button></li>
+          <li class="favourite"><button>
+              <img src="./resource/image/Icon_favourite+line.svg" alt="" class="icn">
+              <span>Favourites</span></button>
+          </li>
+        </ul>
+        <div class="sort_bar">
+          <div class="select_wrap">
+            <button class="select">
+              <p class="def">sort by <span class="choice">Title A-Z</span></p>
+              <img src="./resource/image/icon_Chevron.svg" alt="cho">
+            </button>
+            <ul class="select_list">
+              <li><a href="#">Title</a></li>
+              <li><a href="#">Series</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section03">
+      <ul class="item_wrap">
+        <li class='item'>
+          <ul class='option'>
+            <li><a class='favourite' href='javascript:;'><img src='./resource/image/Icon_book.svg' alt=''></a></li>
+            <li><a class='infomation' href='#'><img src='./resource/image/icon_info.svg' alt=''></a></li>
+            <li><a class='favourite' href='javascript:;'><img src='./resource/image/Icon_favourite+line.svg' alt=''></a>
+            </li>
+          </ul><img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><a href='#'></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  // profile click
+  $("header .profile").click(function () {
+    $("header .profile .profileInfo").toggleClass("act");
+    $(".profile_bg").toggleClass("act");
+  });
+
+  // select box
+  $(".select_wrap").click(function () {
+    $(this).toggleClass("act");
+  });
+
+  // tab
+  $(".tab li").click(function () {
+    $(".tab li").removeClass("act");
+    $(this).addClass("act");
+    if ($(".tab li.favourite").hasClass("act")) {
+      $(this).find('img').attr("src", "./resource/image/Icon_favourite+fill.svg");
+    } else {
+      $(".tab li.favourite").find('img').attr("src", "./resource/image/Icon_favourite+line.svg");
+    }
+  });
+
+  // <li class='item'> copy
+  for (i = 1; i < 12; i++) {
+
+    $(".section03 .item_wrap").append("<li class='item'><ul class='option'><li><a class='favourite' href='javascript:;'><img src='./resource/image/Icon_book.svg' alt=''></a></li><li><a class='infomation' href='#'><img src='./resource/image/icon_info.svg' alt=''></a></li><li><a class='favourite' href='javascript:;'><img src='./resource/image/Icon_favourite+line.svg' alt=''></a></li></ul><img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><a href='#'></a></li>");
+  }
+
+</script>
+
+</html>

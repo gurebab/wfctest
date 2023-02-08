@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="./resource/js/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="./resource/css/wfc_m.css">
+    <title>moblie WFC</title>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <h1>
+                <a href="#" style="background-image: url(./resource/image/m_Logo.png);">Home</a>
+            </h1>
+            <button class="search" style="background-image: url(./resource/image/Icon_search_gray.svg);"></button>
+            <button class="menu" style="background-image: url(./resource/image/Icon_menu.svg);"></button>
+            <ul class="profileInfo">
+                <li class="btn_close">
+                    <button></button>
+                </li>
+                <li class="top">
+                    <img class="profile_img" src="./resource/image/임시이미지/temporary_proflie.png" alt="profile">
+                    <p>Elizabeth</p>
+                </li>
+                <li class="center">
+                    <a href="#" class="change">
+                        <span>Switch to</span>
+                        <p href="#" class="highlights">Highlights</p><span>collection</span>
+                    </a>
+                    <a href="#">FAQ</a>
+                </li>
+                <li class="bottom">
+                    <a href="#">Log Out</a>
+                </li>
+            </ul>
+        </header>
+        <div class="section01">
+            <button>
+                <div class="cover">
+                    <div class="con">
+                        <div class="tit">
+                            <h2>Today’s Book</h2>
+                        </div>
+                        <div class="book">
+                            <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="">
+                        </div>
+                        <p class="tit">Winnie the Pooh Tales of Kindness</p>
+                        <div class="metaData">
+                            <dl>
+                                <dt>Level</dt>
+                                <dd>1</dd>
+                            </dl>
+                            <dl>
+                                <dt>Series</dt>
+                                <dd>Disney</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+        <div class="section02">
+            <div class="con">
+                <div class="tit">
+                    <p class="userName">Elizabeth’s</p>
+                    <h2>Last Read Book</h2>
+                </div>
+                <div class="slide_wrap">
+                    <ul class="lastRead">
+                        <li class="item">
+                            <a href="#">
+                                <img src="./resource/image/임시이미지/temporary_m_lastRead01.png" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="section03">
+            <div class="con">
+                <div class="tit">
+                    <h2>Reading Stats</h2>
+                </div>
+                <div class="stat">
+                    <dl>
+                        <dt>Words</dt>
+                        <dd>4826</dd>
+                    </dl>
+                    <dl>
+                        <dt>BOOKS</dt>
+                        <dd>4826</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="section04">
+            <div class="con">
+                <div class="sort_wrap">
+                    <div class="select_wrap level">
+                        <button class="select">
+                            <p>Level</p>
+                            <img src="./resource/image/icon_Chevron.svg" alt="cho">
+                        </button>
+                    </div>
+                    <div class="select_wrap sort">
+                        <button class="select">
+                            <p>Title A-Z</p>
+                            <img src="./resource/image/Icon_list.svg" alt="list">
+                        </button>
+                    </div>
+                    <button class="favourites">
+                        <img src="./resource/image/Icon_favourite+line.svg" alt="favourites">
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="section05">
+            <div class="con">
+                <ul class="item_wrap">
+                    <li class='item'>
+                        <img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><a href='#'></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+        <!-- dimmed pop up -->
+        <div class="popup">
+            <div class="todaysbook_popup">
+                <div class="cover">
+                    <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="">
+                    <button class="btn_close">
+                        <img src="./resource/image/Icon_close.svg" alt="">
+                    </button>
+                    <div class="title">
+                        <p>Today’s Book</p>
+                        <p>Winnie the Pooh Tales of Kindness</p>
+                    </div>
+                </div>
+                <div class="info">
+                    <ul class="top">
+                        <li>
+                            <p>Level</p>
+                            <p>3</p>
+                        </li>
+                        <li>
+                            <p>Series</p>
+                            <p>Disney</p>
+                        </li>
+                        <li class="favourites">
+                            <button>
+                                <img src="./resource/image/Icon_favourite+fill.svg" alt="favourites">
+                            </button>
+                        </li>
+                    </ul>
+                    <p class="text_box">
+                        Read along with Disney! Sea monsters Luca and Alberto have an amazing adventure on land! Follow
+                        along with word-for-word narration as Luca and Alberto see how hard it is to adjust to life on
+                        land!
+                    </p>
+                    <a href="#" class="btn_read">Read</a>
+                </div>
+            </div>
+            <div class="sorting_popup select_popup">
+                <p>Sorting</p>
+                <ul>
+                    <li><button>Title A-Z</button></li>
+                    <li class="act"><button>Title Z-A</button></li>
+                    <li><button>Series</button></li>
+                </ul>
+            </div>
+            <div class="level_popup select_popup">
+                <p>Level</p>
+                <ul>
+                    <li><button>Decodeables</button></li>
+                    <li><button>Level 1</button></li>
+                    <li><button>Level 2</button></li>
+                    <li><button>Level 3</button></li>
+                </ul>
+                <button class="clear">Clear selection</button>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // section1 bg
+    $(function () {
+        const imgSrc = $(".section01 .book img").attr("src");
+        $(".section01").css({
+            'background': 'url(' + imgSrc + ') no-repeat center / 100%'
+        });
+    });
+
+    //last read "<li class='item'>" copy
+    for (i = 1; i < 10; i++) {
+        for (x = 1; x < 4; x++) {
+            $(".section02 .slide_wrap .lastRead").append("<li class='item'><a href='#'><img src='./resource/image/임시이미지/temporary_m_lastRead0" + x + ".png' alt=''></a></li>");
+        }
+    }
+
+
+    // <li class='item'> copy
+    for (i = 1; i < 4; i++) {
+
+        $(".section05 .item_wrap").append("<li class='item'><img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><a href='#'></a></li>");
+    }
+
+
+    // popup close
+    $(function () {
+
+        // open dimmed section01 click
+        $(".section01 button").click(function () {
+            $(".popup").addClass("act");
+            $(".popup .todaysbook_popup").addClass("act");
+        });
+        $(".popup .todaysbook_popup .cover .btn_close").click(function () {
+            $(".popup").removeClass("act");
+            $(".popup .todaysbook_popup").removeClass("act");
+        });
+
+        // sorting
+        $(".section04 .con .sort_wrap .select_wrap.sort").click(function () {
+            $(".popup").addClass("act");
+            $(".popup .sorting_popup").addClass("act");
+        });
+        $(".popup .sorting_popup ul li button").click(function () {
+            const text = $(this).text();
+            $(".popup .sorting_popup ul li").removeClass("act");
+            $(this).parent("li").addClass("act");
+            setTimeout(function () {
+                $(".popup").removeClass("act");
+                $(".popup .sorting_popup").removeClass("act");
+            }, 100);
+            $(".section04 .con .sort_wrap .select_wrap.sort .select p").text(text);
+        });
+
+        //level
+        $(".section04 .con .sort_wrap .select_wrap.level").click(function () {
+            $(".popup").addClass("act");
+            $(".popup .level_popup").addClass("act");
+        });
+        $(".popup .level_popup ul li button").click(function () {
+            const text = $(this).text();
+            $(".popup .level_popup ul li").removeClass("act");
+            $(this).parent("li").addClass("act");
+            setTimeout(function () {
+                $(".popup").removeClass("act");
+                $(".popup .level_popup").removeClass("act");
+            }, 100);
+            $(".section04 .con .sort_wrap .select_wrap.level .select p").text(text);
+        });
+        $(".popup .select_popup.level_popup button").click(function () {
+            $(".popup .select_popup.level_popup, .popup .select_popup.level_popup * , .popup").removeClass("act");
+        });
+
+        // menu
+        $("header button.menu").click(function () {
+            $(this).toggleClass("act");
+            $("header .profileInfo").toggleClass("act");
+        });
+        $("header .profileInfo li.btn_close button").click(function () {
+            $("header .profileInfo").toggleClass("act");
+        });
+    });
+
+
+</script>
+
+</html>

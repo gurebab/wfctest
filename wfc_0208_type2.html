@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="70여글자">
+  <meta name="title" content="타이틀">
+  <meta property="og:type" content="주소">
+  <meta property="og:title" content="주70여글자">
+  <meta property="og:description" content="페이지 설명">
+  <meta property="og:image" content="../썸네일.png">
+  <meta property="og:url" content="사이트주소">
+  <link rel="canonical" href="대표url">
+  <title>WFC Library</title>
+
+  <script src="./resource/js/jquery-3.3.1.min.js"></script>
+
+  <link rel="stylesheet" href="./resource/css/wfc_0208_type2.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <input class="search_bar" type="text" placeholder="search">
+      <h1><a class="logo" href="#">home</a></h1>
+      <ul class="util">
+        <li class="profile">
+          <div class="profile_bg"></div>
+          <p>Elizabeth</p>
+          <img class="profile_img" src="./resource/image/임시이미지/temporary_proflie.png" alt="profile">
+          <ul class="profileInfo">
+            <li class="top">
+              <img class="profile_img" src="./resource/image/임시이미지/temporary_proflie.png" alt="profile">
+              <p>Elizabeth</p>
+            </li>
+            <li class="center">
+              <a href="#" class="change">
+                <span>Switch to</span>
+                <p href="#" class="highlights">Highlights</p><span>collection</span>
+              </a>
+              <a href="#">FAQ</a>
+            </li>
+            <li class="bottom">
+              <a href="#">Log Out</a>
+            </li>
+          </ul>
+        </li>
+        <li class="lang"><button type="button">中文</button></li>
+      </ul>
+    </header>
+    <div class="section section01">
+      <div class="item_wrap">
+        <div class="Promoted">
+          <div class="book">
+            <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="" class="bookCover">
+            <span class="tag">Today&#8217;s Book</span>
+          </div>
+          <div class="info">
+            <p class="tit">Toy Story 4</p>
+            <span class="plot">Read along with Disney! Sea monsters Luca and Alberto have an amazing adventure on land!
+              Follow along with word-for-word narration as Luca and Alberto see how hard it is to adjust to life on
+              land!
+            </span>
+            <div class="metaData">
+              <dl>
+                <dt>Level</dt>
+                <dd>1</dd>
+              </dl>
+              <dl>
+                <dt>Series</dt>
+                <dd>Pixar</dd>
+              </dl>
+              <dl>
+                <dt>Page</dt>
+                <dd>72</dd>
+              </dl>
+              <button class="favourite"><img src="./resource/image/Icon_favourite+fill.svg" alt=""></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item_wrap">
+        <div class="lastRead">
+          <div class="book">
+            <p class="user_name">Elizabeth’s</p>
+            <span class="tag">Last Read Book</span>
+            <div>
+              <img src="./resource/image/임시이미지/temporary_book01_type2.png" alt="" class="bookCover">
+            </div>
+          </div>
+          <div class="info">
+            <p class="tit">Reading Stats</p>
+            <div class="stat">
+              <dl class="Words">
+                <dd>4826</dd>
+                <dt>Words read</dt>
+              </dl>
+              <dl class="Books">
+                <dd>2816</dd>
+                <dt>Books read</dt>
+              </dl>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section02">
+      <div class="option_wrap">
+        <ul class="tab">
+          <li class="act"><button>Decodeables</button></li>
+          <li><button>Level 1</button></li>
+          <li><button>Level 2</button></li>
+          <li><button>Level 3</button></li>
+          <li class="favourite"><button>
+              <img src="./resource/image/Icon_favourite+line.svg" alt="" class="icn">
+              <span>Favourites</span></button>
+          </li>
+        </ul>
+        <div class="sort_bar">
+          <div class="select_wrap">
+            <button class="select">
+              <p class="def">sort by <span class="choice">Title A-Z</span></p>
+              <img src="./resource/image/icon_Chevron.svg" alt="cho">
+            </button>
+            <ul class="select_list">
+              <li><button>Title</button></li>
+              <li><button>Series</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section section03">
+      <ul class="item_wrap">
+        <li class='item'>
+          <ul class='option'>
+            <li><button class='favourite' href='javascript:;'><img src='./resource/image/Icon_book.svg' alt=''></button></li>
+            <li><button class='infomation' href='#'><img src='./resource/image/icon_info.svg' alt=''></button></li>
+            <li><button class='favourite' href='javascript:;'><img src='./resource/image/Icon_favourite+line.svg' alt=''></button>
+            </li>
+          </ul><img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><a href='#'></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<script>
+  // profile click
+  $("header .profile").click(function () {
+    $("header .profile .profileInfo").toggleClass("act");
+    $(".profile_bg").toggleClass("act");
+  });
+
+  // select box
+  $(".select_wrap").click(function () {
+    $(this).toggleClass("act");
+  });
+
+  // tab
+  $(".tab li").click(function () {
+    $(".tab li").removeClass("act");
+    $(this).addClass("act");
+    if ($(".tab li.favourite").hasClass("act")) {
+      $(this).find('img').attr("src", "./resource/image/Icon_favourite+fill.svg");
+    } else {
+      $(".tab li.favourite").find('img').attr("src", "./resource/image/Icon_favourite+line.svg");
+    }
+  });
+
+  // <li class='item'> copy
+  for (i = 1; i < 12; i++) {
+
+    $(".section03 .item_wrap").append("<li class='item'><ul class='option'><li><button class='favourite'><img src='./resource/image/Icon_book.svg' alt=''></button></li><li><button class='infomation'><img src='./resource/image/icon_info.svg' alt=''></button></li><li><button class='favourite''><img src='./resource/image/Icon_favourite+line.svg' alt=''></button></li></ul><img src='./resource/image/임시이미지/temporary_item01.png' alt='테스트'><button href='#'></button></li>");
+  }
+
+</script>
+
+</html>
